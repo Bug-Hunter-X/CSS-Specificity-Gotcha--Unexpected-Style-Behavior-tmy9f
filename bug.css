@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors:
+
+```css
+div {
+  color: blue;
+}
+
+.special div {
+  color: red; /* This will not override the color of the parent div */
+}
+
+#myDiv {
+  color: green; /* This will override the color of the parent div */
+}
+```
+
+The issue is that the class selector `.special div` is less specific than the ID selector `#myDiv`. Even though `.special div` is more targeted, it does not override the parent's style because of the specificity rules. 
